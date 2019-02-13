@@ -102,17 +102,17 @@ public class ListaLigada {
         }
     }
 
-    public int busca(int elemento) {
+    public boolean buscaElemento(int elemento) {
         Celula atual = this.primeira;
 
         while (atual != null) {
             if (atual.getElemento() == elemento) {
-                return elemento;
+                return true;
             }
             atual = atual.getProxima();
         }
 
-        return -1;
+        return false;
 
     }
 }
